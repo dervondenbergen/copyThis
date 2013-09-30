@@ -1,0 +1,12 @@
+{
+  "name": "copyThis",
+  "description": "An extension to copy text via Javascript.",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "content_scripts": [ {
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": [ "content.js" ],
+    "run_at" : "document_end"
+  } ],
+  "web_accessible_resources": ["copyThis.html","copyThisExtension.js"]
+}
