@@ -34,17 +34,33 @@
 <h2>
 <a name="use" class="anchor" href="#use"><span class="octicon octicon-link"></span></a>Use</h2>
 
-<p>To use copyThis.js, you just have to install the Chrome Extension and include copyThis.js on your webpage.
-The chrome Extension will be avaivable in the Chrome Web Store as soon as possible.
+<p>
+  To use copyThis.js, you just have to install the Chrome Extension and include copyThis.js on your webpage.
+  The chrome Extension will be avaivable in the Chrome Web Store as soon as possible.
 <code>&lt;script src="https://raw.github.com/dervondenbergen/copyThis/gh-pages/copyThis.min.js"&gt;&lt;/script&gt;</code></p>
 
 <h2>
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
 
-<p>Examples using copyThis.js:
-    </p><div>
-      Copy the text on my left
+<p>Example using copyThis.js:
+    </p>
+    <div>
+      <input type="text" id="input"> <button id="button">← Copy this value.</button>
       </div>
+      <script>var button = document.getElementById("button");
+var input = document.getElementById("input");
+var copy = function { copyThis(input.value()) };
+button.addEventListener("click", copy);</script>
+      <p>Javascript:</p>
+      <code>
+var button = document.getElementById("button");
+
+var input = document.getElementById("input");
+
+var copy = function { copyThis(input.value()) };
+
+button.addEventListener("click", copy);
+      </code>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/dervondenbergen">dervondenbergen</a></p>
@@ -52,6 +68,6 @@ The chrome Extension will be avaivable in the Chrome Web Store as soon as possib
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="javascripts/copyThis.min.js"></script>
   </body>
 </html>
