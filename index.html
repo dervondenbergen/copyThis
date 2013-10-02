@@ -11,6 +11,11 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+      #script {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -35,7 +40,10 @@
 <p>
   To use copyThis.js, you just have to install the Chrome Extension and include copyThis.js on your webpage.
   The chrome Extension will be avaivable in the Chrome Web Store as soon as possible.
-<code>&lt;script src="https://raw.github.com/dervondenbergen/copyThis/gh-pages/copyThis.min.js"&gt;&lt;/script&gt;</code></p>
+  <br>
+<code id="script">&lt;script src="https://raw.github.com/dervondenbergen/copyThis/master/copyThis.min.js"&gt;&lt;/script&gt;</code>
+Just click on the code to copy it.
+</p>
 
 <h2>
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
@@ -48,18 +56,23 @@
       <script>
         var button = document.getElementById("button");
         var input = document.getElementById("input");
-        var copy = function(){ copyThis(input.value) };
-        button.addEventListener("click", copy);
+        button.addEventListener("click", function(){
+          copyThis(input.value);
+        });
+        var code = document.getElementById("script");
+        code.addEventListener("click", function(){
+          copyThis(this.innerText);
+        });
       </script>
       <p>Javascript:</p>
       <code>
 var button = document.getElementById("button");
-
+<br>
 var input = document.getElementById("input");
-
-var copy = function { copyThis(input.value()) };
-
-button.addEventListener("click", copy);
+<br>
+button.addEventListener("click", function(){ <br>
+&nbsp;&nbsp;copyThis(input.value); <br>
+});
       </code>
       </section>
       <footer>
