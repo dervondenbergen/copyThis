@@ -6,4 +6,4 @@ To use copyThis, just install the chrome extension, and call the function copyTh
 
 Still WIP. Much has to be done.
 
-Examples: http://dervondenbergen.github.io/copyThis
+Example: http://dervondenbergen.github.io/copyThis
