@@ -28,8 +28,6 @@
         </ul>
       </header>
       <section>
-        <h1>
-<a name="copythisjs" class="anchor" href="#copythisjs"><span class="octicon octicon-link"></span></a>copyThis.js</h1>
 
 <h2>
 <a name="use" class="anchor" href="#use"><span class="octicon octicon-link"></span></a>Use</h2>
@@ -47,10 +45,12 @@
     <div>
       <input type="text" id="input"> <button id="button">← Copy this value.</button>
       </div>
-      <script>var button = document.getElementById("button");
-var input = document.getElementById("input");
-var copy = function { copyThis(input.value()) };
-button.addEventListener("click", copy);</script>
+      <script>
+        var button = document.getElementById("button");
+        var input = document.getElementById("input");
+        var copy = function(){ copyThis(input.value) };
+        button.addEventListener("click", copy);
+      </script>
       <p>Javascript:</p>
       <code>
 var button = document.getElementById("button");
