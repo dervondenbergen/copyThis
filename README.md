@@ -4,4 +4,4 @@ To use copyThis, just install the chrome extension, and call the function copyTh
 
     <script src="path/to/copyThis.min.js" type="text/javascript"></script>
 
-Still WIP. Much has to be done.
+Still work in progress. Much has to be done.
